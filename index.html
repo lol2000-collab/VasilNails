@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nail Bar | Маникюр в Уфе</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* Водяной знак на странице */
+  /* ===== ВОДЯНОЙ ЗНАК ===== */
+body::before {
+    content: '© 2026 Лолита';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-35deg);
+    font-size: 100px;
+    font-weight: 700;
+    color: rgba(26, 26, 26, 0.2);
+    pointer-events: none;
+    z-index: 9999;
+    white-space: nowrap;
+    letter-spacing: 12px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-transform: uppercase;
+    user-select: none;
+    animation: watermarkFloat 12s ease-in-out infinite;
+}
+
+/* Едва заметная анимация */
+@keyframes watermarkFloat {
+    0%, 100% { 
+        transform: translate(-50%, -50%) rotate(-35deg) scale(1);
+        opacity: 0.6;
+    }
+    50% { 
+        transform: translate(-50%, -50%) rotate(-33deg) scale(1.02);
+        opacity: 1;
+    }
+}
+    /* ----- ЦВЕТОВАЯ ГАММА: #C8C7C5, #1A1A1A, #9C744F ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #C8C7C5;
+      color: #1A1A1A;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- НАВИГАЦИЯ ----- */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(26, 26, 26, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid #9C744F;
+      padding: 14px 0;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: #C8C7C5;
+      text-transform: uppercase;
+    }
+    .logo span {
+      color: #9C744F;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: #C8C7C5;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 1rem;
+      transition: 0.25s ease;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+    .nav-links a:hover {
+      color: #9C744F;
+      border-bottom-color: #9C744F;
+    }
+
+    .nav-phone {
+      color: #9C744F;
+      font-weight: 500;
+      background: rgba(156, 116, 79, 0.15);
+      padding: 6px 18px;
+      border-radius: 40px;
+      border: 1px solid #9C744F;
+      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .nav-phone i {
+      color: #C8C7C5;
+    }
+    .nav-phone:hover {
+      background: #9C744F;
+      color: #1A1A1A;
+      border-color: #C8C7C5;
+    }
+
+    /* ----- СЕКЦИИ ----- */
+    section {
+      padding: 70px 0 60px;
+      border-bottom: 1px solid rgba(26, 26, 26, 0.07);
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: #1A1A1A;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 70px;
+      height: 3px;
+      background: #9C744F;
+    }
+    .section-title span {
+      color: #9C744F;
+      font-weight: 400;
+    }
+
+    /* ----- ГЕРОЙ ----- */
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(145deg, #C8C7C5 0%, #b8b6b3 100%);
+      position: relative;
+      overflow: hidden;
+      padding-top: 10px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      right: -8%;
+      top: -20%;
+      width: 50%;
+      height: 140%;
+      background: radial-gradient(circle, rgba(156,116,79,0.12) 0%, transparent 70%);
+      transform: rotate(10deg);
+      pointer-events: none;
+    }
+    .hero-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-text {
+      flex: 1 1 400px;
+    }
+    .hero-text h1 {
+      font-size: 3.8rem;
+      font-weight: 300;
+      color: #1A1A1A;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      animation: fadeUp 1s ease;
+    }
+    .hero-text h1 i {
+      color: #9C744F;
+      font-weight: 400;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      margin-bottom: 28px;
+      max-width: 500px;
+    }
+    .hero-btn {
+      background: #1A1A1A;
+      color: #C8C7C5;
+      border: none;
+      padding: 16px 42px;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .hero-btn i {
+      color: #9C744F;
+      transition: 0.3s;
+    }
+    .hero-btn:hover {
+      background: #9C744F;
+      color: #1A1A1A;
+      transform: scale(1.02);
+    }
+    .hero-btn:hover i {
+      color: #1A1A1A;
+    }
+
+    .hero-image {
+      flex: 1 1 300px;
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 30px 30px 30px 0;
+      box-shadow: -20px 20px 0 #9C744F, 0 20px 40px rgba(0,0,0,0.2);
+      transition: 0.4s;
+      filter: grayscale(8%);
+      background: #1A1A1A;
+    }
+    .hero-image img:hover {
+      transform: translateY(-6px);
+      box-shadow: -20px 20px 0 #1A1A1A, 0 30px 50px rgba(0,0,0,0.3);
+    }
+
+    /* ----- ГАЛЕРЕЯ (фото работ) ----- */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 10px;
+    }
+    .gallery-item {
+      background: #1A1A1A;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+      transition: 0.3s ease;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border: 2px solid #9C744F;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+      filter: brightness(0.92);
+    }
+    .gallery-item:hover img {
+      transform: scale(1.04);
+      filter: brightness(1.02);
+    }
+    .gallery-item .placeholder-icon {
+      font-size: 4.2rem;
+      color: #9C744F;
+      opacity: 0.4;
+    }
+    .gallery-item .badge {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(26,26,26,0.7);
+      backdrop-filter: blur(4px);
+      color: #C8C7C5;
+      padding: 4px 14px;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      border: 1px solid #9C744F;
+    }
+
+    /* ----- ПРАЙС + ПАМЯТКА (сетка) ----- */
+    .price-memo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 10px;
+    }
+    @media (max-width: 780px) {
+      .price-memo-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    .price-card, .memo-card {
+      background: #1A1A1A;
+      padding: 32px 28px;
+      border-radius: 32px;
+      color: #C8C7C5;
+      box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+      transition: 0.3s;
+      border: 1px solid #9C744F;
+    }
+    .price-card:hover, .memo-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 44px rgba(0,0,0,0.25);
+    }
+
+    .price-card h3, .memo-card h3 {
+      color: #9C744F;
+      font-size: 1.7rem;
+      font-weight: 300;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid rgba(156,116,79,0.25);
+      padding-bottom: 12px;
+    }
+    .price-card h3 i, .memo-card h3 i {
+      color: #C8C7C5;
+    }
+
+    .price-category {
+      margin-top: 20px;
+    }
+    .price-category h4 {
+      color: #9C744F;
+      font-weight: 400;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      border-left: 3px solid #9C744F;
+      padding-left: 12px;
+    }
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0 8px 12px;
+      border-bottom: 1px dashed rgba(156,116,79,0.15);
+      font-size: 1rem;
+    }
+    .price-item:last-child {
+      border-bottom: none;
+    }
+    .price-item span:last-child {
+      color: #9C744F;
+      font-weight: 500;
+    }
+
+    .memo-content {
+      padding: 4px 0;
+    }
+    .memo-content .memo-block {
+      margin-bottom: 18px;
+    }
+    .memo-content .memo-block h4 {
+      color: #9C744F;
+      font-weight: 400;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+    .memo-content .memo-block h4 i {
+      color: #C8C7C5;
+      width: 24px;
+      text-align: center;
+    }
+    .memo-content ul {
+      list-style: none;
+      padding-left: 36px;
+    }
+    .memo-content ul li {
+      padding: 3px 0;
+      font-size: 0.97rem;
+      opacity: 0.9;
+      position: relative;
+    }
+    .memo-content ul li::before {
+      content: '•';
+      color: #9C744F;
+      position: absolute;
+      left: -18px;
+    }
+    .memo-content .highlight-box {
+      background: rgba(156,116,79,0.08);
+      border-left: 4px solid #9C744F;
+      padding: 14px 18px;
+      border-radius: 16px;
+      margin: 10px 0;
+      font-style: italic;
+    }
+
+    /* ----- ЗАПИСЬ / КОНТАКТЫ ----- */
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      background: #1A1A1A;
+      padding: 44px 40px;
+      border-radius: 40px;
+      border: 1px solid #9C744F;
+      color: #C8C7C5;
+    }
+    .contact-info {
+      flex: 1 1 300px;
+    }
+    .contact-info h3 {
+      color: #9C744F;
+      font-size: 2rem;
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+    .contact-info p {
+      margin: 8px 0;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .contact-info i {
+      color: #9C744F;
+      width: 28px;
+      text-align: center;
+    }
+    .contact-info .address {
+      margin-top: 16px;
+      padding: 16px 20px;
+      background: rgba(156,116,79,0.08);
+      border-radius: 20px;
+      border: 1px solid rgba(156,116,79,0.2);
+    }
+
+    .contact-form {
+      flex: 1 1 300px;
+      background: rgba(200,199,197,0.05);
+      padding: 24px 28px;
+      border-radius: 28px;
+      border: 1px solid rgba(156,116,79,0.2);
+    }
+    .contact-form h4 {
+      color: #9C744F;
+      font-weight: 400;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 14px 18px;
+      margin-bottom: 14px;
+      border-radius: 40px;
+      border: 1px solid rgba(156,116,79,0.3);
+      background: #C8C7C5;
+      color: #1A1A1A;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      outline: 2px solid #9C744F;
+      border-color: transparent;
+    }
+    .contact-form textarea {
+      border-radius: 24px;
+      resize: vertical;
+      min-height: 90px;
+    }
+    .contact-form button {
+      background: #9C744F;
+      border: none;
+      color: #1A1A1A;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 60px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .contact-form button:hover {
+      background: #C8C7C5;
+      color: #1A1A1A;
+      transform: scale(1.01);
+    }
+
+    /* ----- ОТЗЫВЫ ----- */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+      margin-top: 10px;
+    }
+    .review-card {
+      background: #1A1A1A;
+      padding: 28px 24px;
+      border-radius: 28px;
+      border: 1px solid #9C744F;
+      color: #C8C7C5;
+      transition: 0.3s;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+    .review-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.15);
+    }
+    .review-card .stars {
+      color: #9C744F;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    .review-card p {
+      font-style: italic;
+      margin: 10px 0;
+      opacity: 0.9;
+    }
+    .review-card .author {
+      font-weight: 500;
+      color: #9C744F;
+      margin-top: 6px;
+    }
+
+    /* ----- ФУТЕР ----- */
+    footer {
+      background: #1A1A1A;
+      color: #C8C7C5;
+      padding: 30px 0;
+      text-align: center;
+      border-top: 2px solid #9C744F;
+    }
+    footer span {
+      color: #9C744F;
+    }
+
+    /* ----- АНИМАЦИИ ----- */
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* адаптив */
+    @media (max-width: 600px) {
+      .hero-text h1 { font-size: 2.6rem; }
+      .section-title { font-size: 2rem; }
+      .navbar .container { flex-direction: column; align-items: stretch; }
+      .nav-links { justify-content: center; gap: 1rem; }
+      .nav-phone { align-self: center; }
+      .contact-wrapper { padding: 28px 20px; }
+    }
+    /* ----- КНОПКИ ЗАПИСИ ----- */
+.contact-buttons {
+  flex: 1 1 300px;
+  background: rgba(200,199,197,0.05);
+  padding: 28px 30px;
+  border-radius: 28px;
+  border: 1px solid rgba(156,116,79,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-buttons h4 {
+  color: #9C744F;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 18px 24px;
+  border-radius: 60px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.call-btn {
+  background: #C8C7C5;
+  color: #1A1A1A;
+  border-color: #9C744F;
+}
+.call-btn i {
+  color: #9C744F;
+  font-size: 1.3rem;
+}
+.call-btn:hover {
+  background: #9C744F;
+  color: #1A1A1A;
+  transform: scale(1.02);
+  border-color: #C8C7C5;
+}
+.call-btn:hover i {
+  color: #1A1A1A;
+}
+
+.tg-btn {
+  background: #1A1A1A;
+  color: #C8C7C5;
+  border-color: #9C744F;
+}
+.tg-btn i {
+  color: #9C744F;
+  font-size: 1.3rem;
+}
+.tg-btn:hover {
+  background: #9C744F;
+  color: #1A1A1A;
+  transform: scale(1.02);
+  border-color: #C8C7C5;
+}
+.tg-btn:hover i {
+  color: #1A1A1A;
+}
+  </style>
+</head>
+<body>
+
+<!-- ===== НАВИГАЦИЯ ===== -->
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">Vasil<span>Nails</span></div>
+    <div class="nav-links">
+      <a href="#gallery">Работы</a>
+      <a href="#price-memo">Прайс</a>
+      <a href="#price-memo">Памятка</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contact">Запись</a>
+    </div>
+    <a href="tel:+79374982009" class="nav-phone"><i class="fas fa-phone-alt"></i> 8 (937) 498-20-09</a>
+  </div>
+</nav>
+
+<!-- ===== ГЕРОЙ ===== -->
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1>Идеальный <i>маникюр</i> в Уфе</h1>
+      <p>Твой образ начинается с рук. Профессиональный уход, авторский дизайн и теплое отношение.</p>
+      <a href="#contact" class="hero-btn"><i class="fas fa-calendar-check"></i> Записаться</a>
+    </div>
+    <div class="hero-image">
+      <!-- замените src на своё фото -->
+      <img src="https://cdnf.goldapple.ru/mobile/article/69b976a8274178563aa6868e.jpg" alt="Маникюр" />
+    </div>
+  </div>
+</section>
+
+<!-- ===== ГАЛЕРЕЯ (фото работ) ===== -->
+<section id="gallery">
+  <div class="container">
+    <h2 class="section-title">Мои <span>работы</span></h2>
+    <div class="gallery-grid">
+      <!-- Замените src на свои фото. Сейчас — заглушки с иконками -->
+      <div class="gallery-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJXMXHj2HBgXf59an3Gog03nmGkYcwg7V8HiTRH-JDBfJpy7TO_gotShhV&s=10" alt="Работа 1" /><span class="badge">гель-лак</span></div>
+      <div class="gallery-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn_ILI2ar-6MjxAdy1sUB8wGL8f49kK4jsiFXbXi2mhA&s=10" alt="Работа 2" /><span class="badge">дизайн</span></div>
+      <div class="gallery-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYHEAjz-20HJMaTzr815h3Bn7JfCN8I_agQbrvlquJlA&s=10" alt="Работа 3" /><span class="badge">стилет</span></div>
+      <div class="gallery-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBkidUyInsaSSaP1HpnG0_sW0OmRONTyECaKTmOm5dKw&s=10" alt="Работа 4" /><span class="badge">френч</span></div>
+      <!-- Если хотите оставить места под свои фото, просто замените src -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== ПРАЙС + ПАМЯТКА ===== -->
+<section id="price-memo">
+  <div class="container">
+    <h2 class="section-title">Прайс &amp; <span>Памятка</span></h2>
+    <div class="price-memo-grid">
+      <!-- ПРАЙС -->
+      <div class="price-card">
+        <h3><i class="fas fa-ruble-sign"></i> Прайс-лист</h3>
+
+        <div class="price-category">
+          <h4>💅 Маникюр и покрытие</h4>
+          <div class="price-item"><span>Покрытие гель-лаком</span><span>900 ₽</span></div>
+          <div class="price-item"><span>Укрепление гелем + гель-лак</span><span>1 000 ₽</span></div>
+          <div class="price-item"><span>Снятие без дальнейшего покрытия</span><span>700 ₽</span></div>
+        </div>
+
+        <div class="price-category">
+          <h4>📐 Наращивание ногтей</h4>
+          <div class="price-item"><span>Длина 1–2</span><span>1 050 ₽</span></div>
+          <div class="price-item"><span>Длина 3–4</span><span>1 350 ₽</span></div>
+          <div class="price-item"><span>Длина 5–6</span><span>1 650 ₽</span></div>
+          <div class="price-item"><span>Длина 7</span><span>1 950 ₽</span></div>
+        </div>
+
+        <div class="price-category">
+          <h4>⚔️ Наращивание (форма Стилет)</h4>
+          <div class="price-item"><span>Длина 4</span><span>1 550 ₽</span></div>
+          <div class="price-item"><span>Длина 5</span><span>1 750 ₽</span></div>
+          <div class="price-item"><span>Длина 6</span><span>1 950 ₽</span></div>
+          <div class="price-item"><span>Длина 7</span><span>2 150 ₽</span></div>
+        </div>
+
+        <div class="price-category">
+          <h4>➕ Дополнительные услуги</h4>
+          <div class="price-item"><span>Снятие чужого/предыдущего покрытия</span><span>200 ₽</span></div>
+          <div class="price-item"><span>Дизайн (в зависимости от сложности)</span><span>от 200–500 ₽</span></div>
+          <div class="price-item"><span>Фигурки и слайдеры: 1 ноготь</span><span>бесплатно</span></div>
+          <div class="price-item"><span>Каждый последующий ноготь</span><span>50 ₽</span></div>
+        </div>
+
+        
+      </div>
+
+      <!-- ПАМЯТКА -->
+      <div class="memo-card">
+        <h3><i class="fas fa-heart"></i> Памятка для клиентов</h3>
+        <div class="memo-content">
+          <div class="memo-block">
+            <h4><i class="fas fa-calendar-alt"></i> Запись на процедуру</h4>
+            <ul>
+              <li>Желаемую дату и время</li>
+              <li>Тип маникюра и дизайн (фото-референс или мудборд приветствуется)</li>
+            </ul>
+          </div>
+
+          <div class="memo-block">
+            <h4><i class="fas fa-clock"></i> Правила посещения и пунктуальность</h4>
+            <ul>
+              <li><strong>Приходите вовремя.</strong> Кабинет открывается ровно в назначенное время.</li>
+              <li><strong>Опоздание.</strong> Предупредите меня. Опоздание до 20 минут может сократить время на сложный дизайн.</li>
+              <li><strong>Отмена записи.</strong> Если вы не пришли в течение 20 минут и не предупредили — запись аннулируется.</li>
+              <li><strong>Срочный прием</strong> вне рабочего времени — доплата 200 ₽.</li>
+              <li><strong>Важное ограничение:</strong> приходите без сопровождающих (друзей, детей, питомцев). Я принимаю на дому, где находится моя семья, и мне важно обеспечить комфорт каждому.</li>
+            </ul>
+          </div>
+
+          <div class="memo-block">
+            <h4><i class="fas fa-star"></i> Обратная связь</h4>
+            <div class="highlight-box">
+              Если в процессе работы или сразу после вам что-то не понравилось (форма, цвет, длина) — <strong>скажите мне сразу</strong>. Мы всё исправим, чтобы вы остались довольны, а наши отношения оставались тёплыми и доверительными.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ОТЗЫВЫ ===== -->
+<section id="reviews">
+  <div class="container">
+    <h2 class="section-title">Отзывы <span>клиентов</span></h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>«Самый лучший мастер в Уфе! Делает всё аккуратно, дизайн просто сказка. Уже 2 года хожу только к ней.»</p>
+        <div class="author">— Екатерина</div>
+      </div>
+      <div class="review-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>«Очень нравится атмосфера и отношение. Всегда подскажет, что лучше выбрать. Результат превосходит ожидания!»</p>
+        <div class="author">— Анна</div>
+      </div>
+      <div class="review-card">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>«Быстро, качественно, стильно. Маникюр держится больше 3 недель. Очень рекомендую!»</p>
+        <div class="author">— Ольга</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ЗАПИСЬ / КОНТАКТЫ ===== -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Запись &amp; <span>Контакты</span></h2>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <h3><i class="fas fa-handshake"></i> Свяжитесь со мной</h3>
+        <p><i class="fas fa-phone-alt"></i> <a href="tel:+79374982009" style="color:#C8C7C5; text-decoration:none;">8 (937) 498-20-09</a></p>
+        <p><i class="fab fa-telegram"></i> <a href="https://t.me/vizgisuk" style="color:#C8C7C5; text-decoration:none;">@vizgisuk</a></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:nailbar@example.com" style="color:#C8C7C5; text-decoration:none;">nailbar@example.com</a></p>
+        <div class="address">
+          <i class="fas fa-map-pin" style="color:#9C744F; margin-right:8px;"></i>
+          <strong>г. Уфа,</strong> ул. Ленина, д. 10, подъезд 3 (домофон 45)
+        </div>
+        <p style="margin-top:12px; font-size:0.95rem; opacity:0.7;"><i class="fas fa-clock"></i> Пн–Сб: 10:00 – 20:00</p>
+      </div>
+
+      <div class="contact-buttons">
+        <h4><i class="fas fa-phone-alt"></i> Свяжитесь удобным способом</h4>
+        <div class="btn-group">
+          <a href="tel:+79374982009" class="contact-btn call-btn">
+            <i class="fas fa-phone"></i> Позвонить
+          </a>
+          <a href="https://t.me/vizgisuk" target="_blank" class="contact-btn tg-btn">
+            <i class="fab fa-telegram-plane"></i> Написать в Telegram
+          </a>
+        </div>
+        <p style="margin-top:16px; font-size:0.9rem; opacity:0.6; text-align:center;">
+          Нажимая на кнопку, вы сразу переходите в приложение
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ФУТЕР ===== -->
+<footer>
+  <div class="container">
+    <p>© 2026 <span>VasilNails</span> — маникюр в Уфе. Сделано с любовью к вашим рукам.</p>
+  </div>
+</footer>
+
+</body>
+</html>
